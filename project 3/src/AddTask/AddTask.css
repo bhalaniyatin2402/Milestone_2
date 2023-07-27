@@ -1,0 +1,26 @@
+.task-add {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-add input {
+    width: 30vw;
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+}
+
+.add-btn {
+    position: relative;
+    background-color: purple;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: none;
+    left: -75px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}

@@ -1,0 +1,44 @@
+.update-task {
+    height: 85vh;
+    padding: 2% 5%;
+}
+
+.all-task {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2.66%;
+}
+
+.task-card {
+    width: 23%;
+    background-color: rgb(12, 12, 32);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 2.66%;
+}
+
+.task-name {
+    font-size: 1rem;
+}
+
+.task-status {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.update-btn,
+.remove-btn {
+    width: 100%;
+    margin: 5px auto;
+    background-color: rgb(106, 8, 233);
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
