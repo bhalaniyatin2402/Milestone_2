@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    padding: 12px 20px;
+}
+
+header {
+    display: flex;
+}
+
+.add-btn {
+    margin: auto 10px auto auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.blog-card {
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 0px 4px black;
+}
+
+.blog-card img {
+    width: 200px;
+    margin: auto;
+}
+
+.blog-title {
+    margin-top: 10px;
+}
+
+.blog-description {
+    margin-top: 10px;
+}
+
+.read-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 3px;
+    font-weight: bold;
+    color: rgb(243, 86, 86);
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: lightpink;
+    cursor: pointer;
+}
+
+.read-btn a {
+    text-decoration: none;
+}
+
+/* model */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    border-radius: 14px;
+    background-color: lightgrey;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+form input,
+textarea,
+.submit-btn {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.submit-btn {
+    background-color: purple;
+    color: #ffff;
+    border: none;
+    padding: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+

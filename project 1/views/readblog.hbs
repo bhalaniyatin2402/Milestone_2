@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/readblog.css">
+</head>
+<body>
+    <header>
+        <h1>PWSkills Blog</h1>
+        <button class="add-btn" > <a href="/homepage"> &lAarr; </a> </button>
+    </header>
+    <section class="blogpage-container">
+        <div class="blog-header">
+            <div class="blog-header-left">
+                <h2 class="blogpage-title">
+                    {{title}}
+                </h2>
+                <div class="blogpage-description">
+                    {{description}}
+                </div>
+            </div>
+            <div class="blog-header-right">
+                <img src="{{poster}}" alt="">
+            </div>
+        </div>
+        <div class="blogpage-content">
+            {{content}}
+        </div>
+    </section>
+
+    <script src="../script/readblog.js"></script>
+</body>
+</html>
