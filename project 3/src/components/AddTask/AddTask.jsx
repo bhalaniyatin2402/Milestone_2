@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import './AddTask.css'
+import { useTasks, useDispatchTasks } from '../../context/TaskContext'
 
-function AddTask({ onAddTask }) {
+function AddTask() {
     const [ text, setText ] = useState('')
+    const dispatch = useDispatchTasks()
+    const tasks = useTasks()
 
     return (
         <div className='task-add'>
@@ -16,7 +19,11 @@ function AddTask({ onAddTask }) {
                 disabled={text.length === 0}
                 onClick={() => {
                     setText('')
-                    onAddTask(text)
+                    dispatch({
+                        type: 'add',
+                        id: tasks.length,
+                        text: text
+                    })
                 }}
             >
                 Add

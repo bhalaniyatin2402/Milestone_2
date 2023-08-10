@@ -4,7 +4,7 @@ function taskReducer(tasks, action) {
             ...tasks, {
                 id: action.id,
                 name: action.text,
-                status: 'Pending'
+                status: false
             }
         ]
     } else if(action.type === 'update') {

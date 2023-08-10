@@ -1,29 +1,27 @@
-import { useState } from 'react'
 import './UpdateTask.css'
+import { useTasks, useDispatchTasks } from '../../context/TaskContext'
 
-function UpdateTask({ tasks, onUpdateTask, onRemoveTask }) {
+function UpdateTask() {
+    const tasks = useTasks()
+    const dispatch = useDispatchTasks()
+
   return (
     <div className='update-task'>
         <ol className='all-task'>
             {tasks.map(task => (
                 <li key={task.id} className='task-card' >
                     <b className='task-name' >{task.id + 1 + '. ' + task.name}</b>
-                    <p className='task-status' >Status: {task.status}</p>
+                    <p className='task-status' >Status: {(task.status) ? 'Completed' : 'Pending'}</p>
                     <button 
                         className='update-btn'
                         onClick={() => {
-                            if(task.status === 'Pending') {
-                                onUpdateTask({
+                            dispatch({
+                                type: 'update',
+                                task: {
                                     ...task,
-                                    status: 'Completed'
-                                })
-                            }
-                            else if(task.status === 'Completed') {
-                                onUpdateTask({
-                                    ...task,
-                                    status: 'Pending'
-                                })
-                            }
+                                    status: !task.status
+                                }
+                            })
                         }}
                     >
                         Update Status
@@ -31,7 +29,10 @@ function UpdateTask({ tasks, onUpdateTask, onRemoveTask }) {
                     <button
                         className='remove-btn'
                         onClick={() => {
-                            onRemoveTask(task.id)
+                            dispatch({
+                                type: 'remove',
+                                id: task.id
+                            })
                         }}
                     >
                         Remove
