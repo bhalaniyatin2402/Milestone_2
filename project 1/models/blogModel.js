@@ -19,7 +19,6 @@ const blogModel = new Schema({
     },
     poster: {
         type: String,
-        default: [true, 'https://www.monsterinsights.com/wp-content/uploads/2020/01/what-is-the-best-time-to-post-a-blog-and-how-to-test-it.jpg']
     }
 })
 

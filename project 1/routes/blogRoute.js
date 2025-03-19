@@ -1,11 +1,13 @@
 import { Router } from "express";
 const bolgRoutes = Router()
 
+import { upload } from "../middleware/multerMiddleware.js";
+
 import { homepage, addblog, blogpage, getallblogs } from "../controllers/blogController.js";
 
-bolgRoutes.route('/homepage').get(homepage)
-bolgRoutes.route('/allblogs').get(getallblogs)
-bolgRoutes.route('/addblog').post(addblog)
-bolgRoutes.route('/blogpage/:id').get(blogpage)
+bolgRoutes.get('/homepage', homepage)
+bolgRoutes.get('/allblogs', getallblogs)
+bolgRoutes.post('/addblog',upload.single('poster'), addblog)
+bolgRoutes.get('/blogpage/:id', blogpage)
 
 export default bolgRoutes

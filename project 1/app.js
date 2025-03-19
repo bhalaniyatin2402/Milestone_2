@@ -19,5 +19,4 @@ import blogRoutes from './routes/blogRoute.js'
 
 app.use('/', blogRoutes)
 
-
 export default app
